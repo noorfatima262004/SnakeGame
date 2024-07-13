@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Hunting</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+
+<body>
+    <div class="FrontImage">
+        <svg width="100%" height="200" viewBox="0 0 1000 200">
+            <defs>
+                <path id="curve" d="M100,100 Q500,10 900,100" />
+            </defs>
+            <text width="100%">
+                <textPath xlink:href="#curve" startOffset="50%" text-anchor="middle">
+                    Snake Hunting
+                </textPath>
+            </text>
+        </svg>
+        <div class="btn">
+            <button id="rulesButton">Instructions</button>
+            <button id="startGameButton">Start Game</button>
+    </div>
+    </div>
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times</span>
+            <h2>Game Instructions</h2>
+            <ul>
+                <li>You Can Pause And Resume The Game .</li>
+                <li>You can Mute And UnMute The Game Audio .</li>
+                <li>The Snake Has to eat All the Food From the Grid .</li>
+                <li>You can also quit the Game at any time by Pressing Cross at the top left corner at anytime . </li>
+                <li>The snake will die if he has touched any boundry or collapse in Himself .</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script src="FrontPage.js"></script>
+
+</html>

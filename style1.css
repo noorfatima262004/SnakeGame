@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FrontImage {
+    background: url('img/f1.png');
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.btn{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    align-items: center;
+    gap: 40vmin;
+    position: absolute;
+    top: 550px;
+}
+button {
+    background-color: #4F77F9;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-family: 'New Tegomin', serif;
+    padding: 15px 30px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #F23400;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #365ecf;
+    transform: scale(0.95);
+}
+
+
+/* Define the keyframes for the slide-out animation */
+@keyframes slideIn {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    75%{
+opacity: 0.5;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  /* Apply the animation to an element with the class 'slide-out' */
+  .slide-in {
+    animation: slideIn 0.5s forwards;
+    background-color:  #568A35;
+  }
+
+h2{
+    color: white;
+    text-align: center;
+    font-family: 'New Tegomin', serif;
+}
+ul{
+    list-style: square;
+    color: #0237e6;
+    font-family: 'New Tegomin', serif;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: absolute;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 80%;
+    max-width: 500px;
+    background-color: rgb(245, 48, 48);
+    padding: 20px;
+    border: 1px solid #888;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    animation: grow 0.5s forwards;
+}
+ul li{
+margin-bottom: 5px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes grow {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+.modal-content.shrink {
+    animation: shrink 0.5s forwards;
+}
+
+/* CSS for curved text */
+svg {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 200px;
+}
+
+text {
+    font-size: 80px;
+    font-weight: 900;
+    font-family: 'New Tegomin', serif;
+    fill: #224a09;
+}
