@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Hunting</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
+
 <body>
-    <div class="body">
-        <div class="score-Board">
-            <div class="icons">
-                <i id="cross" class="fa-regular fa-circle-xmark"></i>
-                <i id="pauseIcon" class="fa-regular fa-circle-pause" onclick="togglePauseResume()"></i>
-                <i id="resumeIcon" class="fa-regular fa-circle-play" style="display: none;" onclick="togglePauseResume()"></i>
-                <i id="soundToggle" class="fa-solid fa-volume-xmark" onclick="toggleSound()"></i>
-            <!-- <i class="fa-regular fa-circle-play"></i> -->
-            <!-- <i class="fa-solid fa-pause"></i> -->
-            <!-- <i class="fa-solid fa-volume-xmark"></i> -->
-        </div>
-            <div id="scoreBox"> <img width="70px" height="60px"   src="img/food-removebg-preview.png" alt="" srcset=""> : 0</div>
-            <div id="HighScore"> <img src="img/hScore.png" alt="" srcset="">: 0</div>
-        </div>
-        <audio id="Maudio" src="music/music.mp3" loop="loop"></audio>
-        <div class="box">
+    <div class="FrontImage">
+        <svg width="100%" height="200" viewBox="0 0 1000 200">
+            <defs>
+                <path id="curve" d="M100,100 Q500,10 900,100" />
+            </defs>
+            <text width="100%">
+                <textPath xlink:href="#curve" startOffset="50%" text-anchor="middle">
+                    Snake Hunting
+                </textPath>
+            </text>
+        </svg>
+        <div class="btn">
+            <button id="rulesButton">Instructions</button>
+            <button id="startGameButton">Start Game</button>
+    </div>
+    </div>
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times</span>
+            <h2>Game Instructions</h2>
+            <ul>
+                <li>You Can Pause And Resume The Game .</li>
+                <li>You can Mute And UnMute The Game Audio .</li>
+                <li>The Snake Has to eat All the Food From the Grid .</li>
+                <li>You can also quit the Game at any time by Pressing Cross at the top left corner at anytime . </li>
+                <li>The snake will die if he has touched any boundry or collapse in Himself .</li>
+            </ul>
         </div>
     </div>
-    <script src="script.js"></script>
-    <script>
-        window.onload = function() {
-            initializeGame(); // Start the game automatically
-        };
-    </script>
+
 </body>
+<script src="script.js"></script>
+
 </html>
